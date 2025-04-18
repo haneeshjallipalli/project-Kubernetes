@@ -6,21 +6,20 @@ kubectl apply -f app-service.yaml
 
 ## Install NGINX Ingress Controller
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.4/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.1/deploy/static/provider/cloud/deploy.yaml
 ```
 
 ### It will install the controller in the ingress-nginx namespace, creating that namespace if it doesn’t already exist.
-
-## deploy ingress resource
-```
-kubectl apply -f ingress.yaml
-```
 
 ## Wait for it to come up:
 ```
 kubectl get pods -n ingress-nginx
 ```
-or 
+
+## deploy ingress resource
+```
+kubectl apply -f ingress.yaml
+```
 
 ## check the name space
 ```
