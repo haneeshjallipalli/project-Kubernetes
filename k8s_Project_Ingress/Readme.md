@@ -24,6 +24,7 @@ or
 ```
 kubectl get all -n ingress-nginx
 ```
-
-
-
+## Now hit localhost to access the application
+```
+localhost
+```
