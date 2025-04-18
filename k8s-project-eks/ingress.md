@@ -25,7 +25,7 @@ kubectl apply -f ingress.yaml
 ```
 kubectl get all -n ingress-nginx
 ```
-## get the dns/ip address & hit it access your application
+## get the dns/ip address with the following command & hit it to access your application
 ```
 kubectl get ingress
 ```

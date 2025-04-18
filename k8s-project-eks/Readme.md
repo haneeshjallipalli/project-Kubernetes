@@ -35,3 +35,10 @@ sudo mv /tmp/eksctl /usr/local/bin
 ```
 eksctl create cluster -f eks-cluster-config.yaml
 ```
+
+# Now follow the instructions in ingress.md file
+
+## Once you are done, cleanup the cluster 
+```
+eksctl delete cluster --name haneesh-cloud --region us-west-1
+```
