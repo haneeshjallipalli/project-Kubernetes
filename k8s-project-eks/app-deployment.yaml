@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: sample
-          image: haneeshdevops/sample:latest
+          image: haneeshdevops/rhel
           ports:
             - containerPort: 8080
 
