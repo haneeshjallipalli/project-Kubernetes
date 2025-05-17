@@ -57,5 +57,12 @@ Next, we need to update the /etc/kubernetes/manifests/etcd.yaml to point to the 
     name: etcd-data
 ```
 
+### Step4: Watch the creation
+This may take a few minutes, and it is expected that kube-controller-manager and kube-scheduler will also restart. To check the containers being restarted:
+```
+watch crictl ps
+```
+### Note: Since all these pods are static pods, they get auto restarted whenever a change is observed
+
 
 
