@@ -24,7 +24,7 @@ snapshot save /opt/snapshot-pre-boot.db
 
 ### Required Options
 
-Use this command to get the mandatory required options:
+Use this command to get the required options:
 ```
 kubectl describe pod etcd-controlplane -n kube-system
 ```
