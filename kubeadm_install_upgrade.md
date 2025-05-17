@@ -1,4 +1,4 @@
-## To seamlessly transition from Kubernetes v1.31 to v1.32 and gain access to the packages specific to the desired Kubernetes minor version, follow these essential steps during the upgrade process. This ensures that your environment is appropriately configured and aligned with the features and improvements introduced in Kubernetes v1.32.
+## => To seamlessly transition from Kubernetes v1.31 to v1.32 and gain access to the packages specific to the desired Kubernetes minor version, follow these essential steps during the upgrade process. This ensures that your environment is appropriately configured and aligned with the features and improvements introduced in Kubernetes v1.32.
 
 On the controlplane node:
 
@@ -46,7 +46,7 @@ systemctl daemon-reload
 systemctl restart kubelet
 ```
 
-#  Steps to upgrade workernodes:
+# => Steps to upgrade workernodes:
 On the node01 node, run the following commands:
 
 If you are on the controlplane node, run ssh node01 to log in to the node01.
@@ -67,16 +67,16 @@ apt-cache madison kubeadm
 ```
 Based on the version information displayed by apt-cache madison, it indicates that for Kubernetes version 1.32.0, the available package version is 1.32.0-1.1. Therefore, to install kubeadm for Kubernetes v1.32.0, use the following command:
 ```
-apt-get install kubeadm=1.32.0-1.1
+apt install kubeadm=1.32.0-1.1
 ```
 
-# Upgrade the node 
+### Upgrade the node 
 ```
 kubeadm upgrade node
 ```
 Now, upgrade the Kubelet version.
 ```
-apt-get install kubelet=1.32.0-1.1
+apt install kubelet=1.32.0-1.1
 ```
 Run the following commands to refresh the systemd configuration and apply changes to the Kubelet service:
 ```
@@ -86,4 +86,5 @@ systemctl restart kubelet
 ```
 Type exit or logout or enter CTRL + d to go back to the controlplane node.
 
+#### Note: The only difference in upgradation process between cluster & node is we just instal kubeadm on worker node, but we won't "upgrade apply" on the node, as it dont have any components like apiserver, etcd etc to upgrade
 
