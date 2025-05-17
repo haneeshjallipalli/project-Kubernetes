@@ -23,6 +23,11 @@ snapshot save /opt/snapshot-pre-boot.db
 ```
 
 ### Required Options
+
+Use this command to get the mandatory required options:
+```
+kubectl describe pod etcd-controlplane -n kube-system
+```
 --endpoints points to the etcd server (default: localhost:2379)
 
 --cacert path to the CA cert
