@@ -45,3 +45,5 @@ systemctl daemon-reload
 
 systemctl restart kubelet
 ```
+
+# Note: Repeat all the above steps for workernodes as well
