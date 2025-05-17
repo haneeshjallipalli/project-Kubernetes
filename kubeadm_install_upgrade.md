@@ -37,7 +37,7 @@ Note that the above steps can take a few minutes to complete.
 
 ### Now, upgrade the Kubelet version. Also, mark the node (in this case, the "controlplane" node) as schedulable.
 ```
-apt-get install kubelet=1.32.0-1.1
+apt install kubelet=1.32.0-1.1
 ```
 ### Run the following commands to refresh the systemd configuration and apply changes to the Kubelet service:
 ```
