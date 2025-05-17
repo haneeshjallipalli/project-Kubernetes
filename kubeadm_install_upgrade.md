@@ -25,7 +25,7 @@ apt-cache madison kubeadm
 ```
 ### Based on the version information displayed by apt-cache madison, it indicates that for Kubernetes version 1.32.0, the available package version is 1.32.0-1.1. Therefore, to install kubeadm for Kubernetes v1.32.0, use the following command:
 ```
-apt-get install kubeadm=1.32.0-1.1
+apt install kubeadm=1.32.0-1.1
 ```
 Run the following command to upgrade the Kubernetes cluster.
 ```
