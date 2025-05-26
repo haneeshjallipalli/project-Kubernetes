@@ -48,6 +48,9 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ```
 
 ### Note: It will install the controller in the ingress-nginx namespace, creates the namespace if it doesn’t already exist.
+### Expected o/p: Two pods are expected be in completed state as they are for only one time task.
+
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/17c6e59a-67a8-42b0-918e-acb1c9d46739" />
 
 ## Wait for it to come up:
 ```
