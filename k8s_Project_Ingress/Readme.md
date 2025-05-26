@@ -35,6 +35,11 @@ kubectl get all -n ingress-nginx
 localhost
 ```
 
+## If you are on cloud, your native cloud provider load balancer will be created. Hit the following command & get the ip or external url to access the app on port 80.
+```
+kubectl get svc -n ingress-nginx
+```
+
 ## Others:
 
 ### Ingress controller installation using Helm
