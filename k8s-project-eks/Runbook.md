@@ -41,7 +41,7 @@ eksctl create cluster -f eks-cluster-config.yaml
 aws eks update-kubeconfig --region us-west-1 --name prod-eks-cluster
 ```
 
-## Mandatorily read important_eks_grant_access.md
+## *Mandatorily read important_eks_grant_access.md
 
 ## deploy the app & service 
 ```
