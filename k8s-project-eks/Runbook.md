@@ -36,6 +36,13 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl create cluster -f eks-cluster-config.yaml
 ```
 
+## update kubeconfig to set current cluster context
+```
+aws eks update-kubeconfig --region us-west-1 --name prod-eks-cluster
+```
+
+## Mandatorily read important_eks_grant_access.md
+
 ## deploy the app & service 
 ```
 kubectl apply -f app-deployment.yaml
