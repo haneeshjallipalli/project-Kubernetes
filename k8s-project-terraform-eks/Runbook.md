@@ -57,7 +57,8 @@ kubectl get ingress
 eksctl delete cluster --name haneesh-cloud --region us-west-1
 ```
 
-## delete the load balancer manually
+## *delete the load balancer manually
+
 
 ### Ingress controller installation using Helm (optional)
 ```
