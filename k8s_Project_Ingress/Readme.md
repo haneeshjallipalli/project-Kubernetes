@@ -40,7 +40,7 @@ localhost
 kubectl get svc -n ingress-nginx
 ```
 
-## Others:
+## Others(optional):
 
 ### Ingress controller installation using Helm
 ```
