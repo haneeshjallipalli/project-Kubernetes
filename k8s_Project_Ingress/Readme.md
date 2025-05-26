@@ -1,4 +1,4 @@
-<img width="464" alt="image" src="https://github.com/user-attachments/assets/4d7a4d51-b5a1-4607-913c-ef4da41278eb" />## deploy the app & service 
+deploy the app & service 
 ```
 kubectl apply -f app-deployment.yaml
 kubectl apply -f app-service.yaml
