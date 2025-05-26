@@ -46,27 +46,32 @@ kubectl apply -f app-service.yaml
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.1/deploy/static/provider/aws/deploy.yaml
 ```
-
-### Note: It will install the controller in the ingress-nginx namespace, creates the namespace if it doesn’t already exist.
-### Expected o/p: Two pods are expected be in completed state as they are for only one time task.
-
-<img width="464" alt="image" src="https://github.com/user-attachments/assets/17c6e59a-67a8-42b0-918e-acb1c9d46739" />
+### Note: It will install the Ingress controller in the ingress-nginx namespace, creates the namespace if it doesn’t already exist.
 
 ## Wait for it to come up:
 ```
 kubectl get pods -n ingress-nginx
 ```
+### Expected o/p: Two pods are expected be in completed state (refer below image) as they are only ment for one time task.
 
-## deploy ingress resource
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/17c6e59a-67a8-42b0-918e-acb1c9d46739" />
+
+
+## deploy ingress resource Now!!
 ```
 kubectl apply -f ingress.yaml
 ```
 
-## check the name space
+## Now hit localhost to access the application
 ```
-kubectl get all -n ingress-nginx
+localhost
 ```
-## get the dns/ip address with the following command & hit it to access your application
+
+## If you are on cloud, your native cloud provider load balancer will be created accordingly. Hit the following command & get the ip or external url to access the app on port 80.
+```
+kubectl get svc -n ingress-nginx
+```
+## you can also use the following command to get ip/external url.
 ```
 kubectl get ingress
 ```
