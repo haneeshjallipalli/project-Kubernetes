@@ -9,7 +9,7 @@ kubectl apply -f app-service.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.1/deploy/static/provider/cloud/deploy.yaml
 ```
 
-### It will install the controller in the ingress-nginx namespace, creating that namespace if it doesn’t already exist.
+### It will install the controller in the ingress-nginx namespace, creates the namespace if it doesn’t already exist.
 
 ### Expected o/p: Two pods are expected be in completed state as they are for only one time task.
 
