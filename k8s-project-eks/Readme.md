@@ -36,9 +36,44 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl create cluster -f eks-cluster-config.yaml
 ```
 
-# Now follow the instructions in ingress.md file
+## deploy the app & service 
+```
+kubectl apply -f app-deployment.yaml
+kubectl apply -f app-service.yaml
+```
+
+## Install NGINX Ingress Controller
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.1/deploy/static/provider/aws/deploy.yaml
+```
+
+### Note: It will install the controller in the ingress-nginx namespace, creates the namespace if it doesn’t already exist.
+
+## Wait for it to come up:
+```
+kubectl get pods -n ingress-nginx
+```
+
+## deploy ingress resource
+```
+kubectl apply -f ingress.yaml
+```
+
+## check the name space
+```
+kubectl get all -n ingress-nginx
+```
+## get the dns/ip address with the following command & hit it to access your application
+```
+kubectl get ingress
+```
 
 ## Once you are done, cleanup the cluster 
 ```
 eksctl delete cluster --name haneesh-cloud --region us-west-1
+```
+
+### Ingress controller installation using Helm (optional)
+```
+helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace
 ```
