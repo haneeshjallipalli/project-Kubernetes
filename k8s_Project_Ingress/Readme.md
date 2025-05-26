@@ -1,4 +1,4 @@
-## deploy the app & service 
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/4d7a4d51-b5a1-4607-913c-ef4da41278eb" />## deploy the app & service 
 ```
 kubectl apply -f app-deployment.yaml
 kubectl apply -f app-service.yaml
@@ -10,6 +10,11 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ```
 
 ### It will install the controller in the ingress-nginx namespace, creating that namespace if it doesn’t already exist.
+
+### Expected o/p: Two pods are expected be in completed state as they are for only one time task.
+
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/17c6e59a-67a8-42b0-918e-acb1c9d46739" />
+
 
 ## Wait for it to come up:
 ```
